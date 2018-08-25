@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-  @GetMapping("/user/1")
+  @GetMapping("/users")
   public LinkedList<User> getUsers() {
     LinkedList<User> list = new LinkedList<User>();
     list.add(new User(1, "Pureewat Kaewpoy"));
@@ -17,6 +17,13 @@ public class UserController {
     list.add(new User(3, "Pureewat Senior"));
     list.add(new User(4, "Doge"));
     list.add(new User(5, "Eiei"));
+    return list;
+  }
+
+  @GetMapping("/users/1")
+  public LinkedList<User> getUser1() {
+    LinkedList<User> list = new LinkedList<User>();
+    list.add(new User(1, "Pureewat Kaewpoy"));
     return list;
   }
 }
